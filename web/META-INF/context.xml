@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/get-json-response">
+    <Resource name="tienhuynhtn"
+              auth="Container" 
+              driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" 
+              type="javax.sql.DataSource" 
+              url="jdbc:sqlserver://localhost:1433;databaseName=GetJSONRespone;instanceName=TIENHUYNHTN" 
+              username="sa" password="Thuytien"/>
+</Context>

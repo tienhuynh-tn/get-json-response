@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+© 2022 tienhuynh-tn
+All rights reserved!
+For more information, please contact via my email: tien.huynhlt.tn@gmail.com
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Hello World</h1>
+        <h2>Check Login using Servlet</h2>
+        <form id="form">
+            Username <input id="txtUsername" type="text" name="txtUsername" value="" /> <br/>
+            Password <input id="txtPassword" type="password" name="txtPassword" value="" /> <br/>
+            <input type="submit" value="Login" name="btAction"/>
+            <input type="reset" value="Reset" />
+        </form>
+        
+        <div id="checkLogin"></div>
+        
+        <h2>Show Profile using RestFul API</h2>
+        <label for="username">Your username</label>
+        <input id="username" type="text" name="username" value="" />
+        <button type="button" onclick="getProfile()">Show Profile</button>
+        
+        <div id="showProfile"></div>
+        
+        <script src="./script.js"></script>
+    </body>
+</html>
