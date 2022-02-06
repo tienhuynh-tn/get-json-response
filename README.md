@@ -21,11 +21,14 @@ Send and receive JSON Response From Servlet or API
 ## Basic Knowledge Required
 - Concept of OOP in Java
 - Basic knowledge in java web application using JSP and servlet
+- Basic knowledge of HTML5, CSS3 and JavaScript
 
 ## Technologies
 - NetBeans 8.2
 - J2EE, JSP, Servlet
 - Apache Tomcat 8.0.27
+- RESTFul API
+- XMLHttpRequest
 
 ## Useful Resources
 
