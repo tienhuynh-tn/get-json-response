@@ -29,6 +29,7 @@ Send and receive JSON Response From Servlet or API
 - Apache Tomcat 8.0.27
 - RESTFul API
 - XMLHttpRequest
+- Microsoft SQL Server
 
 ## Useful Resources
 
@@ -36,7 +37,7 @@ Send and receive JSON Response From Servlet or API
 
 #| Resource Name | Description
 -| ------------- | -----------
-1| - | -
+1| [Database script](https://github.com/tienhuynh-tn/get-json-response/blob/main/database.sql) | Script for Database SQL Server
 
 ### Useful resources for using libraries
 
