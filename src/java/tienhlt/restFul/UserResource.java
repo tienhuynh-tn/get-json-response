@@ -30,21 +30,6 @@ public class UserResource {
 
     public UserResource() {
     }
-    
-    @Path("/checkLogin")
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String checkLogin(
-            @QueryParam("username") String username,
-            @QueryParam("password") String password) 
-            throws SQLException, NamingException {
-        UserDAO userDAO = new UserDAO();
-        boolean result = userDAO.checkLogin(username, password);
-        if (result)
-            return "true";
-        else 
-            return "false";
-    }
 
     @Path("/showprofile")
     @GET
@@ -54,12 +39,5 @@ public class UserResource {
             throws SQLException, NamingException{
         UserDAO userDAO = new UserDAO();
         return userDAO.showProfile(username);
-    }
-    
-    @GET // Mặc định GET sẽ gọi method này
-    @Produces(MediaType.APPLICATION_JSON)    
-    public UserDTO getAll() {         
-        UserDTO dto = new UserDTO("tien", "tientien", "Tiên", true);
-        return dto;
     }
 }

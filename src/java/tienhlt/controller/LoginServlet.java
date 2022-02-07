@@ -5,12 +5,11 @@
  */
 package tienhlt.controller;
 
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +21,6 @@ import org.apache.tomcat.util.http.fileupload.RequestContext;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
-import org.json.simple.JSONObject;
 import tienhlt.user.UserDAO;
 import tienhlt.user.UserDTO;
 
@@ -85,13 +83,9 @@ public class LoginServlet extends HttpServlet {
 
             if (result) {
                 UserDTO dto = dao.showProfile(username);
-                JSONObject jobject = new JSONObject();
-                jobject.put("username", dto.getUsername());
-                jobject.put("password", dto.getPassword());
-                jobject.put("lastname", dto.getLastname());
-                jobject.put("role", dto.isRole());
-                System.out.println("jo: " + jobject);
-                out.print(jobject);
+                Gson gson = new Gson();
+                String json = gson.toJson(dto);
+                out.print(json);
                 response.flushBuffer();
                 out.flush();
             }

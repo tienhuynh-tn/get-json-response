@@ -3,7 +3,6 @@
  * All rights reserved!
  * For more information, please contact via my email: tien.huynhlt.tn@gmail.com
  */
-console.log('Tiên');
 
 //CODE FOR USING SERVLET
 //Creating a form object
@@ -25,7 +24,6 @@ function sendData() {
     req.addEventListener("load", function (event) {
         if (req.responseText !== null) {
             //Processing when processing is successful
-            console.log(req.responseText);
             document.getElementById("checkLogin").innerHTML =
                     this.responseText;
         } else {
@@ -51,9 +49,7 @@ var apiOrginal = "http://localhost:8084/get-json-response/api/user/showprofile?u
 var api = '';
 usernameInput.onchange = function (e) {
     usernameInputText = e.target.value;
-    console.log('username: ', usernameInputText);
     api = apiOrginal + usernameInputText;
-    console.log('api: ', api);
     return api;
 };
 
