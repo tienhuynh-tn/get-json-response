@@ -44,11 +44,13 @@ function sendData() {
 
 //CODE FOR USING RESTFUL API
 var usernameInput = document.querySelector('input[name="username"]');
+console.log('lala: ' + usernameInput);
 var usernameInputText = '';
 var apiOrginal = "http://localhost:8084/get-json-response/api/user/showprofile?username=";
 var api = '';
 usernameInput.onchange = function (e) {
     usernameInputText = e.target.value;
+    console.log('lele: ' + usernameInputText);
     api = apiOrginal + usernameInputText;
     return api;
 };
