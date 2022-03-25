@@ -4,6 +4,6 @@
               auth="Container" 
               driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" 
               type="javax.sql.DataSource" 
-              url="jdbc:sqlserver://localhost:1433;databaseName=GetJSONRespone;instanceName=TIENHUYNHTN" 
-              username="sa" password="Thuytien"/>
+              url="jdbc:sqlserver://localhost:1433;databaseName=GetJSONRespone;instanceName=your-instacnce-sql-server-name" 
+              username="your-username" password="your-password"/>
 </Context>
